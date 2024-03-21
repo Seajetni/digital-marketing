@@ -81,7 +81,7 @@ export default function Section() {
   const ทำไมต้องเชี่ยวชาญแนว = [
     {
       id: "1",
-      img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      img: "/1.png",
       name: "จุดเริ่มต้นของความมั่งคั่งของธุรกิจ เกิดจาก",
       title: "ความสัมพันธ์อันดีงามระหว่างคุณและลูกค้า",
       detail:
@@ -89,8 +89,7 @@ export default function Section() {
     },
     {
       id: "2",
-
-      img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      img: "/2.png",
       name: "ธุรกิจที่กำลังอยู่ในขั้นวิกฤต",
       title: "ค่าแอดแพงลูกค้าน้อย",
       detail:
@@ -98,8 +97,7 @@ export default function Section() {
     },
     {
       id: "3",
-      img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-      name: "ถ้าวันนี้คุณเป็นเจ้าของธุรกิจคนหนึ่ง",
+      img: "/3.png",
       title: "ที่อยากให้ธุรกิจเติบโต",
       detail:
         " อยากมีเวลาในการคิดถึงวิสัยทัศน์ของบริษัท หรือ สนุกกับการคิดนวัตกรรม และสินค้าใหม่ๆ ไม่อยากเอาเวลาที่มีค่า มาเครียดกับปัญหาค่าแอดแพงหรือทำ Content ไปแทบตายก็ไม่มียอดขาย นุ่นและทีมงานพร้อมที่จะเข้าไปช่วยแก้ปัญหาตรงนี้ค่ะ",
@@ -122,7 +120,7 @@ export default function Section() {
                 <div className="  grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  ">
                   <div
                     className={`   shadow-2xl  relative h-64 overflow-hidden  rounded-3xl ${
-                      index % 2 === 1 ? "lg:order-last" : ""
+                      index % 2 === 1 ? "" : "lg:order-last"
                     } sm:h-80 lg:h-full`}
                   >
                     <Image
