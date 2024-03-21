@@ -115,7 +115,6 @@ export default function Section() {
         </div>
         <div>
           {ทำไมต้องเชี่ยวชาญแนว.map((item, index) =>
-            item.id ? (
               <div key={index} className="mx-auto max-w-screen-xl px-4 py-8  ">
                 <div className="  grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  ">
                   <div
@@ -140,9 +139,7 @@ export default function Section() {
                   </div>
                 </div>
               </div>
-            ) : (
-              <div>..Loading....</div>
-            )
+            
           )}
         </div>
       </div>
@@ -233,7 +230,7 @@ export default function Section() {
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {สิ่งที่คุณได้รับจากเชี่ยวชาญแนว.map((item, index) =>
-            item.id ? (
+   
               <div key={index} className="block rounded-xl  p-8  " href="#">
                 <div
                   dangerouslySetInnerHTML={{ __html: item.svg }}
@@ -244,9 +241,7 @@ export default function Section() {
 
                 <p className="mt-1 text-sm ">{item.detail}</p>
               </div>
-            ) : (
-              <div>Loading...</div>
-            )
+            
           )}
         </div>
       </div>
