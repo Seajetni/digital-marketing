@@ -83,60 +83,62 @@ export default function Section() {
       id: "1",
       img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "จุดเริ่มต้นของความมั่งคั่งของธุรกิจ เกิดจาก",
-      title: "Grow your audience",
+      title: "ความสัมพันธ์อันดีงามระหว่างคุณและลูกค้า",
       detail:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quihic atque tenetur quis eius quos ea neque sunt, accusantium solutaminus veniam tempora deserunt? Molestiae eius quidem quam repellat",
+        "ตั้งแต่นุ่นเริ่มต้นให้คำปรึกษาและให้บริการการทำ Content Marketing กับเข้าของธุรกิจมากว่า 88 บริษัทในอุตสาหกรรมที่แตกต่างกัน นุ่นพูดได้เต็มปากว่า สิ่งเดียวที่ตัดสินความเป็นอยู่ของธุรกิจคือ ความสัมพันธ์ระหว่างคุณและลูกค้า",
     },
     {
       id: "2",
+
       img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "ธุรกิจที่กำลังอยู่ในขั้นวิกฤต",
-      title: "Grow your audience",
+      title: "ค่าแอดแพงลูกค้าน้อย",
       detail:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quihic atque tenetur quis eius quos ea neque sunt, accusantium solutaminus veniam tempora deserunt? Molestiae eius quidem quam repellat",
+        " แถมลูกค้าที่น้อยยังไม่มีคุณภาพ ยอดขายน้อยถึงน้อยมาก บางเดือนเอายอดขายหักค่าแอดแล้วติดลบ เพราะแบบนั้นเราเน้นการทำ Value Contentเพื่อสื่อสารไปที่ลูกค้าใหม่ และเรียกลูกค้าเก่าให้กลับมาสนใจเพจ Content คุณภาพสูงถูกปล่อยออกมาแทบทุกวัน จากเพจที่เคยเงียบก็กลับมาคึกคัก",
     },
     {
       id: "3",
       img: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "ถ้าวันนี้คุณเป็นเจ้าของธุรกิจคนหนึ่ง",
-      title: "Grow your audience",
+      title: "ที่อยากให้ธุรกิจเติบโต",
       detail:
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quihic atque tenetur quis eius quos ea neque sunt, accusantium solutaminus veniam tempora deserunt? Molestiae eius quidem quam repellat",
+        " อยากมีเวลาในการคิดถึงวิสัยทัศน์ของบริษัท หรือ สนุกกับการคิดนวัตกรรม และสินค้าใหม่ๆ ไม่อยากเอาเวลาที่มีค่า มาเครียดกับปัญหาค่าแอดแพงหรือทำ Content ไปแทบตายก็ไม่มียอดขาย นุ่นและทีมงานพร้อมที่จะเข้าไปช่วยแก้ปัญหาตรงนี้ค่ะ",
     },
   ];
 
   return (
     <section className="">
-      <div className="bg-gradient-to-tl rounded-3xl p-2 from-green-200 to-emerald-300">
-        <div className="flex justify-center mt-10 ">
-          <h1 className="  bg-emerald-600 text-white p-3 rounded-3xl text-4xl">
+      {/* ทำไมต้องเชี่ยวชาญแนว? */}
+      <div className="">
+        <div className="flex justify-center mt-10">
+          <h1 className="bg-green-500 p-2 text-white shadow-2xl rounded-3xl text-2xl sm:text-3xl ">
             ทำไมต้องเชี่ยวชาญแนว?
           </h1>
         </div>
         <div>
           {ทำไมต้องเชี่ยวชาญแนว.map((item, index) =>
             item.id ? (
-              <div class="mx-auto max-w-screen-xl px-4 py-8  ">
-                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-                  {/* รูปที่เปลี่ยนตำแหน่งไปทางขวา */}
+              <div key={index} className="mx-auto max-w-screen-xl px-4 py-8  ">
+                <div className="  grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  ">
                   <div
-                    class={`relative h-64 overflow-hidden rounded-lg ${
+                    className={`   shadow-2xl  relative h-64 overflow-hidden  rounded-3xl ${
                       index % 2 === 1 ? "lg:order-last" : ""
                     } sm:h-80 lg:h-full`}
                   >
                     <Image
                       width={500}
-                      height={100}
+                      height={60}
                       alt=""
                       src={item.img}
-                      class="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover   "
                     />
                   </div>
-                  {/* เริ่มต้นด้วยข้อความทางซ้าย */}
-                  <div class="lg:py-24">
-                    <h2 class="text-3xl font-bold sm:text-xl bg-gradient-to-br rounded-3xl p-2 from-emerald-300 to-green text-w">{item.name}</h2>
-                    <h3 class="text-3xl font-bold sm:text-3xl">{item.title}</h3>
-                    <p class="mt-4 text-gray-600">{item.detail}</p>
+
+                  <div className="lg:py-24">
+                    <h3 className="text-2xl  font-semibold sm:text-2xl text-gray-800">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 ">{item.detail}</p>
                   </div>
                 </div>
               </div>
@@ -146,20 +148,81 @@ export default function Section() {
           )}
         </div>
       </div>
+      {/* ใครเหมาะกับบริการของเรา? */}
+      <div className=" ">
+        <div className="flex justify-center">
+          <h2 className="   justify-center flex text-2xl lg:text-4xl bg-green-500 rounded-3xl p-2 text-white shadow-2xl run  mt-10">
+            ใครเหมาะกับบริการของเรา?
+          </h2>
+        </div>
 
-      <div>
-         <div></div>
+        <div className="  flex  justify-center ">
+          <ul className=" p-10">
+            <li className="flex items-center mt-2 mb-2 bg-white rounded-xl shadow-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 64 64"
+                className=" w-[180px] h-[80px] lg:w-[80px]"
+              >
+                <path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M29,42L18,31l2-3l9,6 l13.957-12L46,25L29,42z"></path>
+              </svg>
+              <p className="text-lg lg:text-xl p-2 ">
+                เจ้าของธุรกิจที่เติบโตมาแบบออฟไลน์
+                แต่อยากเพิ่มยอดขายและขยายธุรกิจบนโลกออนไลน์
+              </p>
+            </li>
+            <li className="flex items-center bg-white rounded-xl   shadow-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 64 64"
+                className=" w-[180px] h-[80px]  lg:w-[80px]"
+              >
+                <path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M29,42L18,31l2-3l9,6 l13.957-12L46,25L29,42z"></path>
+              </svg>
+              <p className="text-lg lg:text-xl p-2">
+                เจ้าของธุรกิจที่ไม่อยากเอาเวลาที่มีค่า มาเครียดกับปัญหาค่าแอดแพง
+                หรือทำ Content ไปแทบตายก็ไม่มียอดขาย
+              </p>
+            </li>
+            <li className="flex items-center mt-2 mb-2 bg-white rounded-xl shadow-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 64 64"
+                className=" w-[180px] h-[80px]  lg:w-[80px]"
+              >
+                <path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M29,42L18,31l2-3l9,6 l13.957-12L46,25L29,42z"></path>
+              </svg>
+              <p className="text-lg lg:text-xl p-2">
+                เจ้าของธุรกิจที่อยากให้ธุรกิจเติบโต
+                อยากมีเวลาในการคิดถึงวิสัยทัศน์ของบริษัท
+                หรือสนุกกับการคิดนวัตกรรม และสินค้าใหม่ๆ
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
 
-
+      {/* สิ่งที่คุณได้รับจากเชี่ยวชาญแนว */}
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto w-full text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl w-">
+          <h2 className="text-3xl font-bold sm:text-4xl">
             สิ่งที่คุณได้รับจากเชี่ยวชาญแนว
           </h2>
 
           <div className="mt-4   items-center flex  text-center justify-center">
-            <p>
+            <p className="text-xl p-2">
               {" "}
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
@@ -173,7 +236,7 @@ export default function Section() {
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {สิ่งที่คุณได้รับจากเชี่ยวชาญแนว.map((item, index) =>
             item.id ? (
-              <div className="block rounded-xl  p-8  " href="#">
+              <div key={index} className="block rounded-xl  p-8  " href="#">
                 <div
                   dangerouslySetInnerHTML={{ __html: item.svg }}
                   className="w-12 h-10"
