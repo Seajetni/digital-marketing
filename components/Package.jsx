@@ -33,7 +33,7 @@ export default function Package() {
 
   return (
     <>
-      <div className="mx-auto w-full h-screen flex  flex-col  bg-gradient-to-l from-lime-100 to-white px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <div className="mx-auto w-full h-screen flex  flex-col bg-gradient-to-tl rounded-3xl p-2 from-green-200 to-emerald-300 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="flex  flex-col mb-10">
           <div className="flex  justify-center">
             <h2 className="text-3xl    text-white rounded-3xl bg-emerald-600 p-3  md:mr-4">
