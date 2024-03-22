@@ -6,6 +6,7 @@ import Section from "@/components/Section";
 import Review from "@/components/review";
 import Contact from "@/components/contact";
 
+
 export default function Home() {
   const packageRef = useRef(null);
   const sectionRef = useRef(null);
@@ -47,7 +48,7 @@ export default function Home() {
       </div>
 
       <div ref={contactRef}>
-        <Contact />
+        <Contact/>
       </div>
     </main>
   );
