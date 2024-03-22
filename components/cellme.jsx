@@ -22,16 +22,12 @@ export default function Contact() {
               <h3 className="text-2xl font-bold  text-center"> ช่องทางที่ 1</h3>
 
               <div>
-                <h4>
+                <h4 className=" text-lg">
                   ติดต่อผ่านทาง Line Official
                   หากต้องการปรึกษาหรือสอบถามเพิ่มเติม
                 </h4>
                 <div>
-                  <li className="">
-                    {" "}
-                    ติดต่อผ่านทาง Line Official
-                    หากต้องการปรึกษาหรือสอบถามเพิ่มเติม
-                  </li>
+                  <li className="">แอดไลน์เชี่ยวชาญแนว</li>
                   <li className="">พิมพ์ "สนใจทำคอนเทนต์"</li>
                   <li className="">
                     แจ้งธุรกิจที่ต้องการให้เชี่ยวช่วยเติบโตบนโลกออนไลน์
