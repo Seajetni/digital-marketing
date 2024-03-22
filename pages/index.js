@@ -47,9 +47,7 @@ export default function Home() {
         <Package />
       </div>
 
-      <div ref={contactRef}>
-        <Contact/>
-      </div>
+
     </main>
   );
 }
