@@ -229,7 +229,8 @@ export default function Contact() {
               name="option"
             />
 
-            <span className="text-sm"> Option 1 </span>
+<span className="text-sm"> Option 1 </span>
+
           </label>
         </div>
 
