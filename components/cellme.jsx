@@ -21,7 +21,18 @@ export default function Contact() {
             <div className="mt-8">
               <h3 className="text-2xl font-bold  text-center"> ช่องทางที่ 1</h3>
 
-         
+              <ul className="mt-2 not-italic text-2xl">
+                ติดต่อผ่านทาง Line Official หากต้องการปรึกษาหรือสอบถามเพิ่มเติม
+                <li className=" text-xl flex items-center ">
+                  <p>แอดไลน์เชี่ยวชาญแนว</p>
+                </li>
+                <li className=" text-xl flex items-center">
+                  <p>พิมพ์ "สนใจทำคอนเทนต์"</p>
+                </li>
+                <li className=" text-xl flex items-center">
+                  <p>แจ้งธุรกิจที่ต้องการให้เชี่ยวช่วยเติบโตบนโลกออนไลน์</p>
+                </li>
+              </ul>
 
               
               <div className=" my-10">
