@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CellMe() {
   return (
-    <section className=" mt-10">
+    <div className=" mt-10">
       <div className="flex-col  flex items-center">
         <h2 className="justify-center flex text-3xl   lg:text-4xl bg-green-500 rounded-3xl p-3 text-white shadow-2xl   mb-12">
           สนใจปรึกษา
@@ -56,6 +56,6 @@ export default function CellMe() {
       
         </div>
       </div>
-    </section>
+    </div>
   );
 }
