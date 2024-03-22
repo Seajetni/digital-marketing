@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import Package from "@/components/Package";
 import Section from "@/components/Section";
 import Review from "@/components/review";
-import Contact from "@/components/contact";
+
 
 
 export default function Home() {
