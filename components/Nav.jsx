@@ -8,7 +8,14 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 
-export function Nav ({ packageRef, scrollTo }) {
+export function Nav({
+  packageRef,
+  scrollTo,
+  sectionRef,
+  headRef,
+  contactRef,
+  reviewRef,
+}) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -26,9 +33,10 @@ export function Nav ({ packageRef, scrollTo }) {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium "
       >
- 
-
-        <button  className="flex items-center text-lg ">
+        <button
+          className="flex items-center text-lg "
+          onClick={() => scrollTo(headRef)}
+        >
           หน้าเเรก
         </button>
       </Typography>
@@ -38,8 +46,10 @@ export function Nav ({ packageRef, scrollTo }) {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-
-        <button  className="flex items-center text-lg">
+        <button
+          className="flex items-center text-lg"
+          onClick={() => scrollTo(sectionRef)}
+        >
           ทำไมต้องเชี่ยวชาญแนว?
         </button>
       </Typography>
@@ -49,8 +59,10 @@ export function Nav ({ packageRef, scrollTo }) {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
-
-        <button  className="flex items-center text-lg" onClick={() => scrollTo(packageRef)}>
+        <button
+          className="flex items-center text-lg"
+          onClick={() => scrollTo(packageRef)}
+        >
           แพ็คเกจเบื้องต้น
         </button>
       </Typography>
@@ -60,8 +72,10 @@ export function Nav ({ packageRef, scrollTo }) {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
- 
-        <button  className="flex items-center text-lg">
+        <button
+          className="flex items-center text-lg"
+          onClick={() => scrollTo(reviewRef)}
+        >
           ผลลัพธ์
         </button>
       </Typography>
@@ -71,8 +85,10 @@ export function Nav ({ packageRef, scrollTo }) {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-medium"
       >
- 
-        <button  className="flex items-center text-lg">
+        <button
+          className="flex items-center text-lg"
+          onClick={() => scrollTo(contactRef)}
+        >
           ปรึกษา
         </button>
       </Typography>
@@ -82,11 +98,7 @@ export function Nav ({ packageRef, scrollTo }) {
   return (
     <Navbar className="mx-auto   text-black px-4 py-2 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          
-          className="mr-4 cursor-pointer py-1.5 font-medium"
-        >
+        <Typography as="a" className="mr-4 cursor-pointer py-1.5 font-medium">
           Logo
         </Typography>
         <div className="hidden lg:block">{navList}</div>

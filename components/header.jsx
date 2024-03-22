@@ -2,20 +2,26 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 export const Header = () => {
+
+  const content = {
+    h2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+    p:  `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+    egestas tempus tellus etiam sed. Quam a scelerisque amet
+    ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
+    quisque ut interdum tincidunt duis.`
+  }
+
   return (
     <>
       <header className="overflow-hidden  h-full bg-gray-50 sm:grid   sm:grid-cols-2 sm:items-center">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+              {content.h2}
             </h2>
 
             <p className="hidden text-gray-500 md:mt-4 md:block">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed. Quam a scelerisque amet
-              ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-              quisque ut interdum tincidunt duis.
+            {content.p}
             </p>
 
             <div className="mt-4 md:mt-8">

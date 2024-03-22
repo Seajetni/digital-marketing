@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function Section() {
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleForward = () => {
+    setStartIndex((prevIndex) => Math.min(prevIndex + 5, content.length - 1));
+  };
+
+  const handleRewind = () => {
+    setStartIndex((prevIndex) => Math.max(prevIndex - 5, 0));
+  };
+
+
   // เพิ่มได้เรื่อยๆ
+
   const สิ่งที่คุณได้รับจากเชี่ยวชาญแนว = [
     {
       id: "1",
@@ -76,6 +88,13 @@ export default function Section() {
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
     },
+    {
+      head: `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
+      fugit consequuntur saeprem ipsum, dolor sit amet consectetur
+      adipisicing elit. Consequuntur aliquam doloribus nesciunt eos
+      fugiat. Vitae aperiam fugit consequuntur saepe laborum.e laborum.`,
+    },
   ];
 
   const ทำไมต้องเชี่ยวชาญแนว = [
@@ -104,9 +123,109 @@ export default function Section() {
     },
   ];
 
+  const ประเภทธรุกิจที่เราเชี่ยวชาญ = [
+    {
+      id: "1",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "2",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "3",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "4",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "5",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "6",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "7",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "8",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "9",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "10",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "11",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+    {
+      id: "12",
+      name: "สุขภาพ",
+      img: "/halth.png",
+    },
+  ];
+
+  const DNA = [
+    {
+      id: "1",
+      title: "Lorem, ipsum dolor.",
+      img: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.",
+    },
+    {
+      id: "2",
+      title: "Lorem, ipsum dolor.",
+      img: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.",
+    },
+    {
+      id: "3",
+      title: "Lorem, ipsum dolor.",
+      img: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.",
+    },
+    {
+      id: "4",
+      title: "Lorem, ipsum dolor.",
+      img: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.",
+    },
+    {
+      id: "5",
+      title: "Lorem, ipsum dolor.",
+      img: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.",
+    },
+  ];
   return (
     <section className="">
-      {/* ทำไมต้องเชี่ยวชาญแนว? */}
+      {/* ทำไมต้องเชี่ยวชาญแนว?............................................................................................................................... */}
       <div className="">
         <div className="flex justify-center mt-10">
           <h1 className="bg-green-500 p-2 text-white shadow-2xl rounded-3xl text-2xl sm:text-3xl ">
@@ -114,36 +233,35 @@ export default function Section() {
           </h1>
         </div>
         <div>
-          {ทำไมต้องเชี่ยวชาญแนว.map((item, index) =>
-              <div key={index} className="mx-auto max-w-screen-xl px-4 py-8  ">
-                <div className="  grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  ">
-                  <div
-                    className={`   shadow-2xl  relative h-64 overflow-hidden  rounded-3xl ${
-                      index % 2 === 1 ? "" : "lg:order-last"
-                    } sm:h-80 lg:h-full`}
-                  >
-                    <Image
-                      width={500}
-                      height={60}
-                      alt=""
-                      src={item.img}
-                      className="absolute inset-0 h-full w-full object-cover   "
-                    />
-                  </div>
+          {ทำไมต้องเชี่ยวชาญแนว.map((item, index) => (
+            <div key={index} className="mx-auto max-w-screen-xl px-4 py-8  ">
+              <div className="  grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  ">
+                <div
+                  className={`   shadow-2xl  relative h-64 overflow-hidden  rounded-3xl ${
+                    index % 2 === 1 ? "" : "lg:order-last"
+                  } sm:h-80 lg:h-full`}
+                >
+                  <Image
+                    width={500}
+                    height={60}
+                    alt=""
+                    src={item.img}
+                    className="absolute inset-0 h-full w-full object-cover   "
+                  />
+                </div>
 
-                  <div className="lg:py-24">
-                    <h3 className="text-2xl  font-semibold sm:text-2xl text-gray-800">
-                      {item.title}
-                    </h3>
-                    <p className="mt-4 ">{item.detail}</p>
-                  </div>
+                <div className="lg:py-24">
+                  <h3 className="text-2xl  font-semibold sm:text-2xl text-gray-800">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 ">{item.detail}</p>
                 </div>
               </div>
-            
-          )}
+            </div>
+          ))}
         </div>
       </div>
-      {/* ใครเหมาะกับบริการของเรา? */}
+      {/* ใครเหมาะกับบริการของเรา?..................................................................................................................................... */}
       <div className=" ">
         <div className="flex justify-center">
           <h2 className="   justify-center flex text-2xl lg:text-4xl bg-green-500 rounded-3xl p-2 text-white shadow-2xl run  mt-10">
@@ -209,42 +327,113 @@ export default function Section() {
         </div>
       </div>
 
-      {/* สิ่งที่คุณได้รับจากเชี่ยวชาญแนว */}
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+      {/* ประเภทธรุกิจที่เราเชี่ยวชาญ...............................................................................................................................        */}
+      <div>
+        <div className="flex flex-col  items-center">
+          <div className="  justify-center flex text-2xl lg:text-4xl bg-green-500 rounded-3xl p-2 text-white shadow-2xl run   mb-4">
+            <h2>ประเภทธรุกิจที่เราเชี่ยวชาญ</h2>
+          </div>
+          <div className=" text-xl px-10 text-center">
+            <h3>
+              รวมทุกประเภทธุรกิจที่เชี่ยวชาญแนวเคยมอบผลลัพธ์ที่ดีให้
+              เรามีนักเขียนมือฉมังเฉพาะทางในทุกประเภทธุรกิจที่คุณต้องการ
+            </h3>
+          </div>
+          <div>
+            <ul className=" grid  grid-cols-3 lg:grid-cols-6  my-10">
+              {ประเภทธรุกิจที่เราเชี่ยวชาญ.map((item, index) => (
+                <li key={index} className=" p-2 mx-2">
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    width={200}
+                    height={100}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* สิ่งที่คุณได้รับจากเชี่ยวชาญแนว ...............................................................................................................................*/}
+      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16  bg-gradient-to-l rounded-3xl from-lime-200  to-white mb-5">
         <div className="mx-auto w-full text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
             สิ่งที่คุณได้รับจากเชี่ยวชาญแนว
           </h2>
 
           <div className="mt-4   items-center flex  text-center justify-center">
-            <p className="text-xl p-2">
+            <div className="text-xl p-2">
               {" "}
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
-              fugit consequuntur saeprem ipsum, dolor sit amet consectetur
-              adipisicing elit. Consequuntur aliquam doloribus nesciunt eos
-              fugiat. Vitae aperiam fugit consequuntur saepe laborum.e laborum.
-            </p>
+              {สิ่งที่คุณได้รับจากเชี่ยวชาญแนว.map((item, index) => (
+                <h2 key={index}>{item.head}</h2>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {สิ่งที่คุณได้รับจากเชี่ยวชาญแนว.map((item, index) =>
-   
-              <div key={index} className="block rounded-xl  p-8  " href="#">
-                <div
-                  dangerouslySetInnerHTML={{ __html: item.svg }}
-                  className="w-12 h-10"
-                />
+        <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {สิ่งที่คุณได้รับจากเชี่ยวชาญแนว.map((item, index) => (
+            <div key={index} className="block rounded-xl  p-8  " href="#">
+              <div
+                dangerouslySetInnerHTML={{ __html: item.svg }}
+                className="w-12 h-10"
+              />
 
-                <h2 className="mt-4 text-xl font-bold ">{item.title}</h2>
+              <h2 className="mt-4 text-xl font-bold ">{item.title}</h2>
 
-                <p className="mt-1 text-sm ">{item.detail}</p>
-              </div>
-            
-          )}
+              <p className="mt-1 text-sm ">{item.detail}</p>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* DNA ในการทำ Content ของเชี่ยวชาญแนว.................................................................................... */}
+      <div>
+        <div className="flex-col  flex items-center">
+          <h2 className="justify-center flex text-1xl   lg:text-4xl bg-green-500 rounded-3xl p-3 text-white shadow-2xl   mb-12">
+            DNA ในการทำ Content ของเชี่ยวชาญแนว
+          </h2>
+        </div>
+        <div className="flex justify-center ">
+          {DNA.slice(startIndex, startIndex + 3).map((item, index) => (
+            <div key={index} className=" ml-5">
+              <Image
+                alt={item.title}
+                src={item.img}
+                className=""
+                width={200}
+                height={100}
+              />
+              <h3 className="mt-4 text-lg font-bold text-gray-900 sm:text-xl">
+                {item.title}
+              </h3>
+              <p className="mt-2  text-gray-700">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+        {DNA.length > 3 && (
+        <div className="flex justify-center mt-10  mb-12">
+          {[...Array(Math.ceil(DNA.length / 3)).keys()].map((num) => (
+            <button
+              key={num}
+              onClick={() => setStartIndex(num * 3)}
+              className={`mx-1 p-1 rounded-full focus:outline-none ${
+                startIndex === num * 3? 'bg-green-500 text-white  p-2 ' : 'bg-gray-300  p-2'
+              }`}
+            >
+              {''}
+            </button>
+          ))}
+        </div>
+      )}
+      
+      </div>
+
+               
+
+
     </section>
   );
 }
