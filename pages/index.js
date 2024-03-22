@@ -4,6 +4,7 @@ import { Nav } from "@/components/Nav";
 import Package from "@/components/Package";
 import Section from "@/components/Section";
 import Review from "@/components/review";
+import CellMe from "@/components/cellme";
 
 
 
@@ -47,7 +48,9 @@ export default function Home() {
         <Package />
       </div>
 
-
+      <div ref={contactRef}>
+        <CellMe/>
+      </div>
     </main>
   );
 }
